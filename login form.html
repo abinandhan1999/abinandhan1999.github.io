@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+<script>
+
+function showoutput()
+{
+	var rollno= document.getElementById("rollnumber").value;
+	var name= document.getElementById("name").value;
+
+	var pass= Math.floor(parseInt(rollno)/5)+37;
+    document.write("Welcome "+name+", your passcode is "+pass);	
+  
+
+	}
+
+
+</script>
+<style>
+	body{font: 13px/20px &quot;Lucida Grande&quot;, Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: white;}
+	.container {
+  margin: 50px auto;
+  width: 640px;
+}
+	
+  #box{
+  	text-align: center;
+  	background-color: powderblue;
+  	border: 5px solid black;
+  	margin: 40px;
+  }
+	h1{ color: red; text-align: center; }
+	form{text-align: center;}
+</style>
+</head>
+<body>
+<div class="container">	
+<h1>LOGIN FORM</h1>
+<div id="box">	
+	<form onsubmit="return showoutput();">
+	<label for="name">Name:</label><br>
+	<input type="text" id="name" name="name" pattern="[A-Za-z]+" title="only alphabets" required><br>
+	<label for="rollnumber">Roll Number:</label><br>
+	<input type="text" id="rollnumber" name="rollnumber" pattern="[0-9]{9}" title="only 9 digit number" required><br><br>
+	<input type="Submit"   value="Submit">  
+	</form>
+</div>
+<p  style="text-align: center;"><span id="demo"></span></p>
+</div>
+</body>
+</html>
